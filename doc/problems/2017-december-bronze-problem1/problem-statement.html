@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+
+
+ <title>USACO</title>
+ <link rel="stylesheet" type="text/css" href="current/usaco.css?v=2.0">
+ <script src="current/js/jquery.min.js"></script>
+ <script src="https://d3js.org/d3.v3.min.js"></script>
+
+<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+ <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+ <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    "HTML-CSS": {
+	scale: 85,
+	preferredFont: "STIX"
+    },
+  tex2jax: {
+    inlineMath: [['$','$'],['\\(','\\)']],
+    processEscapes: true,
+    skipTags: ['pre'],
+    processClass: "mathjax",
+    ignoreClass: "no-mathjax"
+  }
+});
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body class="no-mathjax">
+ <div align="center">
+  <div class="shadow1">
+
+   <div class="content">
+
+  
+ <a href="index.php"><img src="current/images/usaco_logo.png" height="130px" border="0px" /></a> 
+
+    <div class="navbar" align="left" border="10px">
+     <ul>
+      <li><a href="index.php">Overview</a></li> 
+      <li><a href="index.php?page=details">Details / FAQ</a></li>
+      <li><a href="index.php?page=training">Training</a></li>
+      <li><a href="index.php?page=history">History</a></li>
+      <li><a href="index.php?page=resources">Resources</a></li>
+     </ul>
+    </div><br/>
+
+   
+    
+
+
+<div style="position:relative; float:left; left:10px; top:-50px; width:550px;"> 
+<div class="panel">
+
+<h2> USACO 2017 December Contest, Bronze </h2>
+<h2> Problem 1. Blocked Billboard </h2>
+ 
+</div>
+</div>
+
+<div align="right" style="position:relative; float:right; right:30px; top:-40px; width:350px;">
+
+<button style="margin-bottom:6px;" type="button" onClick="window.location='index.php?page=dec17results';">Return to Problem List</button><br style="padding-top:6px"/>
+Contest has ended.
+
+</div>
+
+<br style="clear:both" />
+
+
+<div id="last-status" style="padding:10px; position:relative; float:left; left:30px; top:-45px; width:820px; border:1px solid black; background-color:#FFF; " 
+	data-response-code="-1" data-sid="-1"> 
+   <img src="current/images/ajax.gif"/> <p style="display:inline;"> <b>Analysis mode</b></p>
+<div id="trial-information"></div>
+<p style="text-align:left;" class="mono prewrap output-data"></p>
+</div>
+
+<br style="clear:both" />
+
+<div align="right" style="position:relative; float:right; right:40px; top:-93px; width:350px; z-index:2; padding:0px;">
+
+<form style="padding-top:60px;" action=""> 
+<select name="lang" style="background-color:#eee;" id="choose-language">
+<option value='en' selected='yes'>English (en)</option>
+<option value='hy'>Armenian (hy)</option>
+<option value='fr'>French (fr)</option>
+<option value='ru'>Russian (ru)</option>
+<option value='es'>Spanish (es)</option>
+</select>
+</form>
+
+</div>
+
+<div align="left" style="position:relative; float:left; left:30px; top:-100px; width:840px; z-index:1;"> 
+<div align="left" class="problem-text" style='width:800px; padding-top:10px;'>
+<span id="probtext-text" class="mathjax">During long milking sessions, Bessie the cow likes to stare out the window of
+her barn  at two huge rectangular billboards across the street advertising
+"Farmer Alex's Amazingly Appetizing Alfalfa" and "Farmer Greg's Great Grain". 
+Pictures of these two cow feed products on the billboards look much tastier to
+Bessie than the grass from her farm.
+
+<p>One day, as Bessie is staring out the window, she is alarmed to see a huge
+rectangular  truck parking across the street.  The side of the truck has an
+advertisement for "Farmer Smith's Superb Steaks", which Bessie doesn't quite
+understand, but she is mostly concerned about the truck potentially blocking the
+view of her two favorite billboards.
+
+<p>Given the locations of the two billboards and the location of the truck, please
+calculate the  total combined area of both billboards that is still visible.  It
+is possible that the truck obscures neither, both, or only one of the
+billboards.  
+
+<p><div class='prob-in-spec'><h4>INPUT FORMAT (file billboard.in):</h4>
+The first line of input contains four space-separated integers: $x_1$ $y_1$
+$x_2$ $y_2$, where $(x_1, y_1)$ and $(x_2, y_2)$ are the coordinates of the
+lower-left and upper-right corners of the first billboard in Bessie's 2D field
+of view.  The next line contains four more integers, similarly specifying the
+lower-left and upper-right corners of the second billboard.  The third and final
+line of input contains four integers specifying the lower-left and upper-right
+corners of the truck.  All coordinates are in the range -1000 to +1000.  The two
+billboards are guaranteed not to have any positive area of overlap between
+themselves.
+</div>
+
+<p><div class='prob-out-spec'><h4>OUTPUT FORMAT (file billboard.out):</h4>
+Please output the total combined area of both billboards that remains visible.
+</div>
+
+<p><h4>SAMPLE INPUT:</h4><pre class='in'>
+1 2 3 5
+6 0 10 4
+2 1 8 3
+</pre><h4>SAMPLE OUTPUT:</h4> <pre class='out'>
+17
+</pre>
+
+<p>Here, 5 units of area from the first billboard and 12 units of area from the 
+second billboard remain visible.
+
+<p>
+<p>Problem credits: Brian Dean
+</span>
+</div>
+
+    
+		<form class="submission" method="POST" action="current/tpcm/submit-solution.php" enctype="multipart/form-data">
+		<div id="solution">
+			<input type="hidden" name="cpid" value="759"/>
+		
+			<div class="field2">
+				<label for="language">Language:</label>
+				<select name="language">
+					<option value='1'>C</option>
+<option value='6'>C++11</option>
+<option value='7'>C++17</option>
+<option value='9'>Java</option>
+<option value='3'>Python-2.7.17</option>
+<option value='4'>Python-3.6.9</option>
+				</select></div>
+			
+			<div class="field2">
+				<label for="sourcefile">Source File:</label>
+				<input name="sourcefile" size="50" type="file" class="required" /></div>
+		
+			<div class="field2">
+				    <input name="solution-submit" id="solution-submit" type="submit" value="Submit Solution" /></div>
+    <p> Note: Many issues (e.g., uninitialized variables,
+			   out-of-bounds memory access) can cause a
+			   program to produce different output when
+			   run multiple times; if your program behaves
+			   in a manner inconsistent with the official
+			   contest results, you should probably look
+			   for one of these issues. Timing can also
+			   differ slightly from run to run, so it is
+			   possible for a program timing out in the
+			   official results to occasionally run just
+			   under the time limit in analysis mode, and
+			   vice versa.  Note also that we have
+			   recently changed grading servers, and since
+			   our new servers run at different speeds
+			   from the servers used during older contests,
+			   timing results for older contest problems may be slightly off until we manage to re-calibrate everything properly. </div>
+		</form>
+    
+</div>
+
+<div align="left" style="position:relative; float:left; left:30px; top:-70px; width:840px;"> 
+
+</div>
+
+<br style="clear:both" />
+
+<script>
+ var retries = 100, timeout = 1000;
+
+ function postback()
+ { 
+     var sid = $('#last-status').data('sid'); if (sid == -1) return;
+     $.post('current/tpcm/status-update.php', { sid: sid }, update_response, 'json'); 
+ }
+
+ function update_response(s)
+ {
+     // only try a limited number of times
+     if (--retries < 0) return;
+
+     // if there is xml data, update the DOM
+     if (s != null)
+     {
+	 $('#last-status img').attr("src","current/images/medal_none.png");
+	 if (parseInt(s.cd) <= -8 && s.sc == 'status-working') { $('#last-status img').attr("src","current/images/ajax.gif"); }
+
+         // change class and text of the response box
+         $('#last-status').removeClass().addClass(s.sc);
+         $('#last-status p').text(s.sr);
+
+         // change the response code of the data section
+         $('#last-status').data('response-code', parseInt(s.cd));
+	 $('#last-status .output-data').hide();
+
+	 if (s.output != null)
+	 {
+	     $('#last-status .output-data').show().text(s.output);
+	     // if the status is in a "working" state, keep checking
+	     if (parseInt($('#last-status').data('response-code')) <= -8)
+		 { setTimeout(postback, timeout); timeout *= 1.1; }
+
+	     return;
+	 }
+
+	 if (s.jd != null && s.jd.length != 0)
+	     $('#trial-information').html(s.jd);
+     }
+
+     // if the status is in a "working" state, keep checking
+     if (parseInt($('#last-status').data('response-code')) <= -8)
+         { setTimeout(postback, timeout); timeout *= 1.1; }
+ }
+
+ $(document).ready(function(){
+     $('#last-status .output-data').hide();
+     $('#last-status img').attr("src","current/images/medal_none.png");
+     if ($('#last-status').length) postback();
+
+     $('.masterTooltip').hover(function(){
+	 // Hover over code
+	 var title = $(this).attr('title');
+	 $(this).data('tipText', title).removeAttr('title');
+	 $('<p class="tooltip"></p>').text(title).appendTo('body').fadeIn('fast');
+     }, function() {
+	 // Hover out code
+	 $(this).attr('title', $(this).data('tipText'));
+	 $('.tooltip').remove();
+     }).mousemove(function(e) {
+	 var mousex = e.pageX + 20; //Get X coordinates
+	 var mousey = e.pageY + 10; //Get Y coordinates
+	 $('.tooltip').css({ top: mousey, left: mousex })
+     });
+ });
+
+ $('#choose-language').change(function(e){
+     window.location = "index.php?page=viewproblem2&cpid=759&lang=" + $(this).val();
+ });
+
+</script>
+
+
+   </div>
+  </div>
+ </div>
+
+ <br style="clear:both" />
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"78b56bf4c9b6423e9342269e694612c3","r":1}' crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
