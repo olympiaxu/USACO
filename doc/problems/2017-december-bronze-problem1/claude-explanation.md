@@ -1,3 +1,4 @@
+"
 # Blocked Billboard — Problem Explanation
 
 **USACO 2017 December Contest, Bronze — Problem 1**
@@ -99,3 +100,4 @@ These are the situations that separate a correct solution from a nearly-correct 
 ## The Question in One Sentence
 
 > Given two non-overlapping axis-aligned rectangles and a third rectangle that may sit on top of them, what is the combined area of the first two that the third does not cover?
+"
