@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Problem1Test {
+public class BlockedBillboard {
     public static void main(String[] args)throws IOException{
         Scanner sc = new Scanner(new File("billboard.in"));
         PrintWriter pw = new PrintWriter(new FileWriter("billboard.out"));
