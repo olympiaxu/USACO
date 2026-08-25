@@ -9,6 +9,3 @@ int area = (ax2 - ax1) * (ay2 - ay1)
 private static boolean isInside(int px, int py, int x1, int y1, int x2, int y2) {
     return (x1 <= px && px <= x2) && (y1 <= py && py <= y2);
 }```
-
-Remaining/Visible Area = Total Area - Overlap Area
-

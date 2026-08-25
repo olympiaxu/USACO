@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class BlockedBillboardII{
+class BlockedBillboardII{
 
 private static boolean isInside(int px, int py, int x1, int y1, int x2, int y2) {
     return (x1 <= px && px <= x2) && (y1 <= py && py <= y2);
